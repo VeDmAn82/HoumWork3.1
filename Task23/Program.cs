@@ -1,11 +1,11 @@
 ﻿// Напишите программу, которая принимает на вход число (N) и выдаёт таблицу кубов чисел от 1 до N
 
-Console.Write("Введите число N: ");
-bool isNum_x = int.TryParse(Console.ReadLine(), out int x);
+Console.Write("Введите число: ");
+bool isNumber = int.TryParse(Console.ReadLine(), out int num);
 
-if (!isNum_x || x <= 0)
+if (!isNumber ||num <= 0)
 {
-    Console.WriteLine("Ошибка ввода");
+    Console.WriteLine("Is not valid");
     return;
 }
 
@@ -32,4 +32,4 @@ void PrintArray(int[] array)
     }
 }
 
-PrintArray(GetCube(x));
+PrintArray(GetCube(num));
